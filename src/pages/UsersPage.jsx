@@ -117,8 +117,11 @@ const UsersPage = () => {
                             <div className="p-5 flex justify-between items-start border-b border-gray-50 bg-gradient-to-b from-gray-50/50 to-white">
                                 <div className="flex gap-4">
                                     {/* Avatar */}
-                                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-400 to-purple-600 text-white border-2 border-white shadow-md flex items-center justify-center text-lg font-bold shrink-0">
-                                        {user.name?.charAt(0).toUpperCase() || '?'}
+                                    <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-md flex items-center justify-center text-lg font-bold shrink-0">
+                                        <img
+                                            className='w-full h-full'
+                                            src={user?.website?.logo || "/logo.png"}
+                                        />
                                     </div>
 
                                     {/* Name & ID */}

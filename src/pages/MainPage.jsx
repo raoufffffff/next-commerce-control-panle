@@ -2,7 +2,7 @@ import React from 'react'
 import StatsCards from '../Components/StatsCards'
 import useUser from '../hook/UseUser'
 import UseOffer from '../hook/UseOffer'
-import useItem from '../hook/useItem'
+import useItem from '../hook/UseItem'
 import OffersContainer from '../Components/OffersContainer'
 
 const MainPage = () => {
