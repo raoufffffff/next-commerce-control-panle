@@ -31,11 +31,13 @@ const Header = () => {
                     <div className="flex items-center gap-8">
                         {/* Brand Logo */}
                         <div className="flex items-center gap-2">
-                            <div className="w-8 h-8 bg-gradient-to-br from-teal-400 to-purple-600 rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold text-lg">C</span>
+                            <div className="w-8 h-8 overflow-hidden rounded-lg flex items-center justify-center">
+                                <img src='/logo.png'
+                                    className='w-full h-full'
+                                />
                             </div>
                             <span className="text-xl font-bold text-gray-900 tracking-tight hidden md:block">
-                                Commerce<span className="text-purple-600">Ctrl</span>
+                                next   Commerce<span className="text-purple-600">Ctrl</span>
                             </span>
                         </div>
 
