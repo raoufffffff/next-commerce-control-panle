@@ -7,7 +7,7 @@ import OffersContainer from '../Components/OffersContainer'
 
 const MainPage = () => {
     const { users, loading: loadingUser } = useUser()
-    const { Offers, loading: loadingOffer, AcceptsOffer, refuseOffer } = UseOffer()
+    const { Offers, loading: loadingOffer, AcceptsOffer, refuseOffer, postOffer } = UseOffer()
     const { Items, loading: loadingItem } = useItem()
     if (loadingUser || loadingOffer || loadingItem) {
         return <div className="flex items-center justify-center min-h-screen">
@@ -16,7 +16,6 @@ const MainPage = () => {
     }
     return (
         <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
-
             {/* Mock Content to show Header context */}
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <div className="mb-8">
@@ -31,6 +30,7 @@ const MainPage = () => {
                     offers={Offers}
                     AcceptsOffer={AcceptsOffer}
                     refuseOffer={refuseOffer}
+                    postOffer={postOffer}
                 />
             </main>
         </div>

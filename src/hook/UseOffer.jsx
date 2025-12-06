@@ -46,13 +46,23 @@ const UseOffer = () => {
             setError(err.response?.data?.message || "Failed to refuse offer");
         }
     }
+    const postOffer = async (body) => {
+        try {
+            await axios.post(`https://next-dashoard-api.vercel.app/manual`, body);
+            fetchOffer(); // Refresh the list after refusal
+        }
+        catch (err) {
+            setError(err.response?.data?.message || "Failed to refuse offer");
+        }
+    }
     return {
         Offers,
         loading,
         error,
         fetchOffer,
         AcceptsOffer,
-        refuseOffer
+        refuseOffer,
+        postOffer
     };
 };
 
